@@ -26,7 +26,10 @@
     <ClInclude Include="pch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="Calculator.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm1.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,6 +44,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm1.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
