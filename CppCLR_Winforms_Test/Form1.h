@@ -60,7 +60,8 @@ namespace CppCLRWinformsProjekt {
 
 
 	private: System::Windows::Forms::Button^ btn0;
-	private: System::Windows::Forms::Button^ btnPoint;
+	private: System::Windows::Forms::Button^ btnDot;
+
 
 
 
@@ -88,7 +89,7 @@ namespace CppCLRWinformsProjekt {
 		/// <summary>
 		/// Erforderliche Designervariable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -109,7 +110,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnDivided = (gcnew System::Windows::Forms::Button());
 			this->btnEquals = (gcnew System::Windows::Forms::Button());
 			this->btn0 = (gcnew System::Windows::Forms::Button());
-			this->btnPoint = (gcnew System::Windows::Forms::Button());
+			this->btnDot = (gcnew System::Windows::Forms::Button());
 			this->btnMutiply = (gcnew System::Windows::Forms::Button());
 			this->btn3 = (gcnew System::Windows::Forms::Button());
 			this->btn2 = (gcnew System::Windows::Forms::Button());
@@ -142,6 +143,7 @@ namespace CppCLRWinformsProjekt {
 			this->txtDisplay->TabIndex = 1;
 			this->txtDisplay->Text = L"0";
 			this->txtDisplay->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->txtDisplay->TextChanged += gcnew System::EventHandler(this, &Form1::txtDisplay_TextChanged);
 			// 
 			// btn8
 			// 
@@ -165,6 +167,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnAdd->TabIndex = 4;
 			this->btnAdd->Text = L"+";
 			this->btnAdd->UseVisualStyleBackColor = true;
+			this->btnAdd->Click += gcnew System::EventHandler(this, &Form1::arithmeticOP);
 			// 
 			// btn9
 			// 
@@ -188,6 +191,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnMinus->TabIndex = 8;
 			this->btnMinus->Text = L"-";
 			this->btnMinus->UseVisualStyleBackColor = true;
+			this->btnMinus->Click += gcnew System::EventHandler(this, &Form1::arithmeticOP);
 			// 
 			// btn6
 			// 
@@ -235,6 +239,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnDivided->TabIndex = 16;
 			this->btnDivided->Text = L"/";
 			this->btnDivided->UseVisualStyleBackColor = true;
+			this->btnDivided->Click += gcnew System::EventHandler(this, &Form1::arithmeticOP);
 			// 
 			// btnEquals
 			// 
@@ -246,6 +251,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnEquals->TabIndex = 15;
 			this->btnEquals->Text = L"=";
 			this->btnEquals->UseVisualStyleBackColor = true;
+			this->btnEquals->Click += gcnew System::EventHandler(this, &Form1::btnEquals_Click);
 			// 
 			// btn0
 			// 
@@ -259,16 +265,17 @@ namespace CppCLRWinformsProjekt {
 			this->btn0->UseVisualStyleBackColor = true;
 			this->btn0->Click += gcnew System::EventHandler(this, &Form1::NumbersOnly);
 			// 
-			// btnPoint
+			// btnDot
 			// 
-			this->btnPoint->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnDot->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
-			this->btnPoint->Location = System::Drawing::Point(11, 215);
-			this->btnPoint->Name = L"btnPoint";
-			this->btnPoint->Size = System::Drawing::Size(46, 36);
-			this->btnPoint->TabIndex = 13;
-			this->btnPoint->Text = L".";
-			this->btnPoint->UseVisualStyleBackColor = true;
+			this->btnDot->Location = System::Drawing::Point(11, 215);
+			this->btnDot->Name = L"btnDot";
+			this->btnDot->Size = System::Drawing::Size(46, 36);
+			this->btnDot->TabIndex = 13;
+			this->btnDot->Text = L".";
+			this->btnDot->UseVisualStyleBackColor = true;
+			this->btnDot->Click += gcnew System::EventHandler(this, &Form1::btnPoint_Click);
 			// 
 			// btnMutiply
 			// 
@@ -280,6 +287,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnMutiply->TabIndex = 12;
 			this->btnMutiply->Text = L"*";
 			this->btnMutiply->UseVisualStyleBackColor = true;
+			this->btnMutiply->Click += gcnew System::EventHandler(this, &Form1::arithmeticOP);
 			// 
 			// btn3
 			// 
@@ -327,6 +335,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnDoNotKnow->TabIndex = 20;
 			this->btnDoNotKnow->Text = L"±";
 			this->btnDoNotKnow->UseVisualStyleBackColor = true;
+			this->btnDoNotKnow->Click += gcnew System::EventHandler(this, &Form1::btnDoNotKnow_Click);
 			// 
 			// btnCE
 			// 
@@ -338,6 +347,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnCE->TabIndex = 19;
 			this->btnCE->Text = L"CE";
 			this->btnCE->UseVisualStyleBackColor = true;
+			this->btnCE->Click += gcnew System::EventHandler(this, &Form1::btnCE_Click);
 			// 
 			// btnC
 			// 
@@ -349,6 +359,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnC->TabIndex = 18;
 			this->btnC->Text = L"C";
 			this->btnC->UseVisualStyleBackColor = true;
+			this->btnC->Click += gcnew System::EventHandler(this, &Form1::btnC_Click);
 			// 
 			// btnBack
 			// 
@@ -360,6 +371,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnBack->TabIndex = 17;
 			this->btnBack->Text = L"<<";
 			this->btnBack->UseVisualStyleBackColor = true;
+			this->btnBack->Click += gcnew System::EventHandler(this, &Form1::btnBack_Click);
 			// 
 			// Form1
 			// 
@@ -373,7 +385,7 @@ namespace CppCLRWinformsProjekt {
 			this->Controls->Add(this->btnDivided);
 			this->Controls->Add(this->btnEquals);
 			this->Controls->Add(this->btn0);
-			this->Controls->Add(this->btnPoint);
+			this->Controls->Add(this->btnDot);
 			this->Controls->Add(this->btnMutiply);
 			this->Controls->Add(this->btn3);
 			this->Controls->Add(this->btn2);
@@ -388,7 +400,7 @@ namespace CppCLRWinformsProjekt {
 			this->Controls->Add(this->txtDisplay);
 			this->Controls->Add(this->btn7);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->Text = L"Calculator";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -398,9 +410,45 @@ namespace CppCLRWinformsProjekt {
 		String^ iop;
 
 	private: System::Void NumbersOnly(System::Object^ sender, System::EventArgs^ e) {
-		Button^ numb = safe_cast<Button^>(sender);
-		if (txtDisplay->Text == "0") txtDisplay->Text = numb->Text;
-		else txtDisplay->Text = txtDisplay->Text + numb->Text;
+		Button^ btnNumb = safe_cast<Button^>(sender);
+		if (txtDisplay->Text == "0") txtDisplay->Text = btnNumb->Text;
+		else txtDisplay->Text = txtDisplay->Text + btnNumb->Text;
 	}
-};
+
+	private: System::Void arithmeticOP(System::Object^ sender, System::EventArgs^ e) {
+		Button^ btnAop = safe_cast<Button^>(sender);
+		dFirstNum = double::Parse(txtDisplay->Text);
+		txtDisplay->Text = "";
+		iop = btnAop->Text;
+	}
+	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
+		txtDisplay->Text = "0";
+	}
+	private: System::Void btnPoint_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (!txtDisplay->Text->Contains(".")) txtDisplay->Text += ".";
+	}
+	private: System::Void btnCE_Click(System::Object^ sender, System::EventArgs^ e) {
+		txtDisplay->Text = "0";
+	}
+	private: System::Void btnBack_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (txtDisplay->Text->Length > 0) txtDisplay->Text = txtDisplay->Text->Remove(txtDisplay->Text->Length - 1, 1);
+	}
+	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		dSecondNum = double::Parse(txtDisplay->Text);
+		if(iop=="+")dAnswer = dFirstNum + dSecondNum;
+		else if(iop == "-")dAnswer = dFirstNum - dSecondNum;
+		else if (iop == "*")dAnswer = dFirstNum * dSecondNum;
+		else if (iop == "/")dAnswer = dFirstNum / dSecondNum;
+
+		txtDisplay->Text = dAnswer + "";
+	}
+	private: System::Void txtDisplay_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (txtDisplay->Text == "") txtDisplay->Text = 0 + "";
+	}
+	private: System::Void btnDoNotKnow_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (txtDisplay->Text->Contains("-")) txtDisplay->Text = txtDisplay->Text->Remove(0, 1);
+		else txtDisplay->Text = "-" + txtDisplay->Text;
+	}
+	};
 }
