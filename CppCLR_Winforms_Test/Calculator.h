@@ -124,7 +124,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn7
 			// 
-			this->btn7->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn7->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn7->Location = System::Drawing::Point(11, 105);
 			this->btn7->Name = L"btn7";
@@ -136,7 +136,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// txtDisplay
 			// 
-			this->txtDisplay->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtDisplay->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->txtDisplay->Location = System::Drawing::Point(12, 12);
 			this->txtDisplay->Name = L"txtDisplay";
@@ -148,7 +148,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn8
 			// 
-			this->btn8->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn8->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn8->Location = System::Drawing::Point(58, 105);
 			this->btn8->Name = L"btn8";
@@ -160,7 +160,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnAdd
 			// 
-			this->btnAdd->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnAdd->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnAdd->Location = System::Drawing::Point(150, 105);
 			this->btnAdd->Name = L"btnAdd";
@@ -172,7 +172,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn9
 			// 
-			this->btn9->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn9->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn9->Location = System::Drawing::Point(104, 105);
 			this->btn9->Name = L"btn9";
@@ -184,7 +184,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnMinus
 			// 
-			this->btnMinus->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnMinus->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnMinus->Location = System::Drawing::Point(150, 142);
 			this->btnMinus->Name = L"btnMinus";
@@ -196,7 +196,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn6
 			// 
-			this->btn6->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn6->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn6->Location = System::Drawing::Point(104, 142);
 			this->btn6->Name = L"btn6";
@@ -208,7 +208,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn5
 			// 
-			this->btn5->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn5->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn5->Location = System::Drawing::Point(58, 142);
 			this->btn5->Name = L"btn5";
@@ -220,7 +220,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn4
 			// 
-			this->btn4->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn4->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn4->Location = System::Drawing::Point(11, 142);
 			this->btn4->Name = L"btn4";
@@ -232,7 +232,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnDivided
 			// 
-			this->btnDivided->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnDivided->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnDivided->Location = System::Drawing::Point(150, 215);
 			this->btnDivided->Name = L"btnDivided";
@@ -244,7 +244,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnEquals
 			// 
-			this->btnEquals->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnEquals->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnEquals->Location = System::Drawing::Point(104, 215);
 			this->btnEquals->Name = L"btnEquals";
@@ -256,7 +256,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn0
 			// 
-			this->btn0->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn0->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn0->Location = System::Drawing::Point(58, 215);
 			this->btn0->Name = L"btn0";
@@ -268,7 +268,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnDot
 			// 
-			this->btnDot->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnDot->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnDot->Location = System::Drawing::Point(11, 215);
 			this->btnDot->Name = L"btnDot";
@@ -280,7 +280,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnMutiply
 			// 
-			this->btnMutiply->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnMutiply->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnMutiply->Location = System::Drawing::Point(150, 178);
 			this->btnMutiply->Name = L"btnMutiply";
@@ -292,7 +292,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn3
 			// 
-			this->btn3->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn3->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn3->Location = System::Drawing::Point(104, 178);
 			this->btn3->Name = L"btn3";
@@ -304,7 +304,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn2
 			// 
-			this->btn2->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn2->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn2->Location = System::Drawing::Point(58, 178);
 			this->btn2->Name = L"btn2";
@@ -316,7 +316,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn1
 			// 
-			this->btn1->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btn1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btn1->Location = System::Drawing::Point(11, 178);
 			this->btn1->Name = L"btn1";
@@ -328,7 +328,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnDoNotKnow
 			// 
-			this->btnDoNotKnow->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnDoNotKnow->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnDoNotKnow->Location = System::Drawing::Point(150, 68);
 			this->btnDoNotKnow->Name = L"btnDoNotKnow";
@@ -340,7 +340,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnCE
 			// 
-			this->btnCE->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnCE->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnCE->Location = System::Drawing::Point(104, 68);
 			this->btnCE->Name = L"btnCE";
@@ -352,7 +352,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnC
 			// 
-			this->btnC->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnC->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnC->Location = System::Drawing::Point(58, 68);
 			this->btnC->Name = L"btnC";
@@ -364,7 +364,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnBack
 			// 
-			this->btnBack->Font = (gcnew System::Drawing::Font(L"微軟正黑體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnBack->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->btnBack->Location = System::Drawing::Point(11, 68);
 			this->btnBack->Name = L"btnBack";
@@ -401,6 +401,7 @@ namespace CppCLRWinformsProjekt {
 			this->Controls->Add(this->txtDisplay);
 			this->Controls->Add(this->btn7);
 			this->Name = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Calculator";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
