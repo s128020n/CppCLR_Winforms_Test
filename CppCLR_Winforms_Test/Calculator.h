@@ -1,4 +1,5 @@
 #pragma once
+//#include "MyForm1.h"
 
 namespace CppCLRWinformsProjekt {
 
@@ -401,6 +402,7 @@ namespace CppCLRWinformsProjekt {
 			this->Controls->Add(this->btn7);
 			this->Name = L"Form1";
 			this->Text = L"Calculator";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -450,5 +452,9 @@ namespace CppCLRWinformsProjekt {
 		if (txtDisplay->Text->Contains("-")) txtDisplay->Text = txtDisplay->Text->Remove(0, 1);
 		else txtDisplay->Text = "-" + txtDisplay->Text;
 	}
-	};
+	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+		/*CppCLR_Winforms_Test::MyForm^ myForm = gcnew CppCLR_Winforms_Test::MyForm;
+		myForm->Show();*/
+	}
+};
 }
