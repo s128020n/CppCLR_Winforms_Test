@@ -166,6 +166,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
+    <Image Include="backgrandImage.bmp" />
+    <Image Include="backgroundimage.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -177,6 +179,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx" />
+    <EmbeddedResource Include="MyForm1.resx">
+      <DependentUpon>MyForm1.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
