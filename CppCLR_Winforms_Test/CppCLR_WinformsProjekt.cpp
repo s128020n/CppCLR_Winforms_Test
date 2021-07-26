@@ -20,6 +20,7 @@ int main() {
 	/*Application::Run(gcnew CppCLRWinformsProjekt::Form1());
 	CppCLR_Winforms_Test::MyForm form;
 	Application::Run(% form);*/
+
 	return 0;
 }
 
