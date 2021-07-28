@@ -177,6 +177,7 @@ namespace CppCLR_Winforms_Test {
 			this->txtUsername->Name = L"txtUsername";
 			this->txtUsername->Size = System::Drawing::Size(192, 16);
 			this->txtUsername->TabIndex = 5;
+			this->txtUsername->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::txtUsername_KeyDown);
 			// 
 			// txtPassword
 			// 
@@ -191,6 +192,7 @@ namespace CppCLR_Winforms_Test {
 			this->txtPassword->Size = System::Drawing::Size(192, 15);
 			this->txtPassword->TabIndex = 6;
 			this->txtPassword->UseSystemPasswordChar = true;
+			this->txtPassword->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::txtPassword_KeyDown);
 			// 
 			// panel1
 			// 
@@ -257,7 +259,7 @@ namespace CppCLR_Winforms_Test {
 			this->pnlTerms->Controls->Add(this->textBox1);
 			this->pnlTerms->Controls->Add(this->label5);
 			this->pnlTerms->Controls->Add(this->btnConfirm);
-			this->pnlTerms->Location = System::Drawing::Point(40, 38);
+			this->pnlTerms->Location = System::Drawing::Point(40, 35);
 			this->pnlTerms->Name = L"pnlTerms";
 			this->pnlTerms->Size = System::Drawing::Size(282, 309);
 			this->pnlTerms->TabIndex = 12;
@@ -388,12 +390,21 @@ namespace CppCLR_Winforms_Test {
 	private: System::Void MyForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (bDragging)
 		{
-			Point pCurrentScreenPosition = PointToScreen(Point( e->X,e->Y));
-			Location =Point( pCurrentScreenPosition.X-pOffset.X,pCurrentScreenPosition.Y-pOffset.Y);
+			Point pCurrentScreenPosition = PointToScreen(Point(e->X, e->Y));
+			Location = Point(pCurrentScreenPosition.X - pOffset.X, pCurrentScreenPosition.Y - pOffset.Y);
 		}
 	}
 	private: System::Void MyForm_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		bDragging = false;
+	}
+	private: System::Void txtUsername_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyValue == (int)Keys::Enter) txtPassword->Focus();
+	}
+	private: System::Void txtPassword_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyValue == (int)Keys::Enter)
+		{
+			if (ckBoxTerms->Checked)btnSignIn->PerformClick();
+		}
 	}
 	};
 }
