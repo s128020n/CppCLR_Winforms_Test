@@ -329,6 +329,9 @@ namespace CppCLR_Winforms_Test {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseDown);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
+			this->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseUp);
 			this->pnlTerms->ResumeLayout(false);
 			this->pnlTerms->PerformLayout();
 			this->ResumeLayout(false);
@@ -373,6 +376,24 @@ namespace CppCLR_Winforms_Test {
 	}
 	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pnlTerms->Show();
+	}
+
+		   bool bDragging;
+		   Point pOffset;
+	private: System::Void MyForm_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		bDragging = true;
+		pOffset.X = e->X;
+		pOffset.Y = e->Y;
+	}
+	private: System::Void MyForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		if (bDragging)
+		{
+			Point pCurrentScreenPosition = PointToScreen(Point( e->X,e->Y));
+			Location =Point( pCurrentScreenPosition.X-pOffset.X,pCurrentScreenPosition.Y-pOffset.Y);
+		}
+	}
+	private: System::Void MyForm_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		bDragging = false;
 	}
 	};
 }
