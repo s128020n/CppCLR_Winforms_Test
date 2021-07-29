@@ -49,13 +49,19 @@ namespace CppCLR_Winforms_Test {
 	private: System::Windows::Forms::Panel^ pnlContrl;
 	private: System::Windows::Forms::Panel^ pnlImage;
 	private: System::Windows::Forms::OpenFileDialog^ openFileDialog;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ btnAnimatingWindows;
+	private: System::Windows::Forms::Timer^ timerClose;
+	private: System::Windows::Forms::Timer^ timerOpen;
+	private: System::ComponentModel::IContainer^ components;
+
 
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -64,6 +70,7 @@ namespace CppCLR_Winforms_Test {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->pctImage = (gcnew System::Windows::Forms::PictureBox());
 			this->btnReset = (gcnew System::Windows::Forms::Button());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
@@ -75,7 +82,11 @@ namespace CppCLR_Winforms_Test {
 			this->btnClose = (gcnew System::Windows::Forms::Button());
 			this->pnlContrl = (gcnew System::Windows::Forms::Panel());
 			this->pnlImage = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->btnAnimatingWindows = (gcnew System::Windows::Forms::Button());
 			this->openFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->timerClose = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timerOpen = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctImage))->BeginInit();
 			this->pnlContrl->SuspendLayout();
 			this->pnlImage->SuspendLayout();
@@ -85,7 +96,7 @@ namespace CppCLR_Winforms_Test {
 			// 
 			this->pctImage->Location = System::Drawing::Point(0, 0);
 			this->pctImage->Name = L"pctImage";
-			this->pctImage->Size = System::Drawing::Size(593, 357);
+			this->pctImage->Size = System::Drawing::Size(581, 357);
 			this->pctImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pctImage->TabIndex = 0;
 			this->pctImage->TabStop = false;
@@ -200,28 +211,64 @@ namespace CppCLR_Winforms_Test {
 			this->pnlContrl->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->pnlContrl->Location = System::Drawing::Point(0, 357);
 			this->pnlContrl->Name = L"pnlContrl";
-			this->pnlContrl->Size = System::Drawing::Size(593, 71);
+			this->pnlContrl->Size = System::Drawing::Size(595, 71);
 			this->pnlContrl->TabIndex = 9;
 			// 
 			// pnlImage
 			// 
+			this->pnlImage->Controls->Add(this->label1);
+			this->pnlImage->Controls->Add(this->btnAnimatingWindows);
 			this->pnlImage->Controls->Add(this->pctImage);
 			this->pnlImage->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pnlImage->Location = System::Drawing::Point(0, 0);
 			this->pnlImage->Name = L"pnlImage";
-			this->pnlImage->Size = System::Drawing::Size(593, 357);
+			this->pnlImage->Size = System::Drawing::Size(595, 357);
 			this->pnlImage->TabIndex = 10;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->label1->Location = System::Drawing::Point(615, 82);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(153, 192);
+			this->label1->TabIndex = 2;
+			this->label1->Text = L"  Hi,\r\n\r\nI\'m trying to create \r\n Animating Windows.\r\n\r\nIf you can read this words"
+				L".\r\nIt means ......\r\n\r\nDO RE MI SO\r\n\r\n> <\r\n\r\n";
+			// 
+			// btnAnimatingWindows
+			// 
+			this->btnAnimatingWindows->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->btnAnimatingWindows->Location = System::Drawing::Point(581, 0);
+			this->btnAnimatingWindows->Name = L"btnAnimatingWindows";
+			this->btnAnimatingWindows->Size = System::Drawing::Size(14, 357);
+			this->btnAnimatingWindows->TabIndex = 1;
+			this->btnAnimatingWindows->Text = L">";
+			this->btnAnimatingWindows->UseVisualStyleBackColor = true;
+			this->btnAnimatingWindows->Click += gcnew System::EventHandler(this, &PictureViewer::btnAnimatingWindows_Click);
 			// 
 			// openFileDialog
 			// 
 			this->openFileDialog->FileName = L"openFileDialog1";
 			this->openFileDialog->Filter = L"*JPGE|*.jpg|All Files|*.**";
 			// 
+			// timerClose
+			// 
+			this->timerClose->Interval = 1;
+			this->timerClose->Tick += gcnew System::EventHandler(this, &PictureViewer::timerClose_Tick);
+			// 
+			// timerOpen
+			// 
+			this->timerOpen->Interval = 1;
+			this->timerOpen->Tick += gcnew System::EventHandler(this, &PictureViewer::timerOpen_Tick);
+			// 
 			// PictureViewer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(593, 428);
+			this->ClientSize = System::Drawing::Size(595, 428);
 			this->Controls->Add(this->pnlImage);
 			this->Controls->Add(this->pnlContrl);
 			this->Name = L"PictureViewer";
@@ -229,6 +276,7 @@ namespace CppCLR_Winforms_Test {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctImage))->EndInit();
 			this->pnlContrl->ResumeLayout(false);
 			this->pnlImage->ResumeLayout(false);
+			this->pnlImage->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -250,7 +298,7 @@ namespace CppCLR_Winforms_Test {
 			pctImage->ImageLocation = openFileDialog->FileName;
 			sPath = System::IO::Path::GetDirectoryName(openFileDialog->FileName);
 			aFiles = System::IO::Directory::GetFiles(sPath);
-			for (int i = 0;i<aFiles->Length;i++)
+			for (int i = 0; i < aFiles->Length; i++)
 			{
 				if (aFiles[i] == openFileDialog->FileName)
 				{
@@ -265,7 +313,7 @@ namespace CppCLR_Winforms_Test {
 		pctImage->ImageLocation = aFiles[iCurrentIndex];
 	}
 	private: System::Void btnNext_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (iCurrentIndex != aFiles->Length-1) iCurrentIndex++;
+		if (iCurrentIndex != aFiles->Length - 1) iCurrentIndex++;
 		pctImage->ImageLocation = aFiles[iCurrentIndex];
 	}
 	private: System::Void btnZoomOriginal_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -291,11 +339,43 @@ namespace CppCLR_Winforms_Test {
 	}
 	private: System::Void btnZoomIn_Click(System::Object^ sender, System::EventArgs^ e) {
 		pctImage->Top -= iZoomLevel / 2;
-		pctImage->Left-= iZoomLevel / 2;
+		pctImage->Left -= iZoomLevel / 2;
 		pctImage->Height += iZoomLevel;
 		pctImage->Width += iZoomLevel;
 
 		iZooms++;
+	}
+
+
+	//AnimatingWindows
+		   int iCount;
+	private: System::Void btnAnimatingWindows_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (btnAnimatingWindows->Text == ">")
+		{
+			timerOpen->Start();
+			btnAnimatingWindows->Text = "<";
+		}
+		else
+		{
+			timerClose->Start();
+			btnAnimatingWindows->Text = ">";
+		}
+	}
+	private: System::Void timerOpen_Tick(System::Object^ sender, System::EventArgs^ e) {
+		if (iCount < 10)
+		{
+			this->Width += 20;
+			iCount++;
+		}
+		else timerOpen->Stop();
+	}
+	private: System::Void timerClose_Tick(System::Object^ sender, System::EventArgs^ e) {
+		if (iCount > 0)
+		{
+			this->Width -= 20;
+			iCount--;
+		}
+		else timerClose->Stop();
 	}
 	};
 }
