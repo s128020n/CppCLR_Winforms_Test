@@ -9,6 +9,7 @@ using namespace System;
 
 #include "Calculator.h"
 #include "MyForm1.h"
+#include "PictureViewer.h"
 
 using namespace System::Windows::Forms;
 
@@ -16,7 +17,7 @@ using namespace System::Windows::Forms;
 int main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew CppCLR_Winforms_Test::MyForm);
+	Application::Run(gcnew CppCLR_Winforms_Test::PictureViewer);
 	/*Application::Run(gcnew CppCLRWinformsProjekt::Form1());
 	CppCLR_Winforms_Test::MyForm form;
 	Application::Run(% form);*/
